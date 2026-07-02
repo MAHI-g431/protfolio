@@ -18,7 +18,7 @@ func Protfolio(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "form.html")
 		return
 	}
-	http.ServeFile(w, r, "go.html")
+	http.ServeFile(w, r, "index.html")
 
 }
 func main() {
