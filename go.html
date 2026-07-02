@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Protfolio</title>
+</head>
+<body>
+    <style>
+        header{
+            height: 100vh;
+            background-color: #2196F3;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        body{
+            margin: 0;
+            font-family: monospace;
+             font-size: 18px;
+             background-color: floralwhite;
+             text-align: center;
+        }
+        h1{
+            color: crimson;
+            font-size: 2rem;
+        }
+        header h1{
+            color: white;
+             margin: 0;
+             
+         }
+        .button{
+            height: 40px;
+            width: 200px;
+            border: none;
+            border-radius: 11px;
+            cursor: pointer;
+        }
+        .button:hover{
+            background-color: blue;
+            color: rgb(235, 235, 235);
+        }
+        img{
+            height: 500px;
+            width: 262px;
+        }
+        section{
+            height: 100vh;
+            border: 1px solid gray;
+            border-radius: 20px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            padding: 20px;
+        }
+         .submit{
+             height: 40px;
+            width: 200px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        .submit:hover{
+            background-color: orange;
+            color: azure;
+        }
+        input{
+            border-radius: 10px;
+            border: 0.5px solid lightgreen;
+            height: 24px;
+            margin: 10px;
+        }
+        .fixedButton{
+            position: fixed;
+            bottom: 10px;
+            right: 25px;
+            height: 70px;
+            width: 70px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            color: aliceblue;
+            background-color: blue;
+
+        }
+        footer{
+            background-color: black;
+            color: aliceblue;
+            padding: 10px;
+            height: 150px;
+            text-align: center;
+        }
+        .skill ol{
+          list-style-position: inside;
+          display: inline-block;
+          text-align: center;
+
+        }
+        table{
+            margin: auto;
+            width: 60%;
+            height: 11vh;
+        }
+         #Projects h1{
+           position: relative;
+           top: 40vh;
+         }
+         a{
+            text-decoration: none;
+         }
+    </style>
+    <header>
+        <div id="Top">
+    <h1>Welcome to my Portfolio</h1><br>
+    <a href="#About">
+        <button class="button">About</button>
+    </a>
+    <a href="#Skills">
+        <button class="button">Skills</button>
+    </a>
+    <a href="#Projects">
+        <button class="button">Projects</button>
+    </a>
+    <a href="#Contact">
+        <button class="button">Contact</button>
+    </a>
+</div>
+    </header>
+    <main>
+        <section id="About">
+         <h1> Mahesh</h1>
+        <img src="myimage.jpg" width="200">
+            <p>I am Mahesh Babu from Andhara Loyola Insitiute of engineering and tecnology<br>Iam currently pursuing my <strong>B tech</strong> in Andhara Loyola Insitiute of engineering and tecnology </p>
+        </section>
+        <div class="skill">
+        <section id="Skills">
+              <h1>
+            My skills
+        </h1>
+        <ol>
+            <li>Go lang</li>
+            <li>C basics</li>
+            <li>Pyton</li>
+        </ol>
+        </section>
+</div>
+        <section id="Projects">
+        <h1>
+            Projects
+        </h1>
+        <table border="1">
+        <tr >
+            <th>Projects </th>
+            <th>Languages used  </th>
+        </tr>
+        <tr> 
+            <th><a>Protfolio</a></th>
+            <th>HTML and CSS</th>
+        </tr>
+        </table>
+         </section>
+        <section id="Contact">
+            <h1>
+            Contacte Me
+        </h1>
+        <p>Feel free to get in touch with me using the below form</p>
+        <form action="/" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" name="name"  class="input" placeholder="Name" required>
+            <br>
+            <label for="email">Email:</label>
+          <input type="email" name="email"  class="input" placeholder="Email" required><br>
+            <button type="submit" class="submit">Submit</button>
+        </form>
+        </section>
+    </main>
+<a href="#Top">
+         <button class="fixedButton">Top</button>
+    </a>
+    <footer>
+        
+        <p>2024 My protfolio</p>
+        <p>(●'◡'●) Mahesh Babu  |  🚀Go developer  |  🎌JLPT N5 </p>
+        <a>😁 Thanks for Visiting my portfolio💻</a>
+
+    </footer>
+</body>
+</html>
