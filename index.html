@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Protfolio</title>
+    <title>Portfolio</title>
 </head>
 <body>
     <style>
@@ -116,7 +116,7 @@
             text-decoration: none;
          }
     </style>
-    <header id="Top"x>
+    <header id="Top">
         <div>
     <h1>Welcome to my Portfolio</h1><br>
     <a href="#About">
@@ -137,7 +137,7 @@
         <section id="About">
          <h1> Mahesh</h1>
         <img src="myimage.jpg" width="200">
-            <p>I am Mahesh Babu from Andhara Loyola Insitiute of engineering and tecnology<br>Iam currently pursuing my <strong>B tech</strong> in Andhara Loyola Insitiute of engineering and tecnology </p>
+            <p>I am Mahesh Babu from Andhra Loyola Institute of engineering and technology<br>I am currently pursuing my <strong>B tech</strong> in Andhra Loyola Institute of engineering and technology </p>
         </section>
         <div class="skill">
         <section id="Skills">
@@ -147,7 +147,7 @@
         <ol>
             <li>Go lang</li>
             <li>C basics</li>
-            <li>Pyton</li>
+            <li>Python</li>
         </ol>
         </section>
 </div>
@@ -161,22 +161,29 @@
             <th>Languages used  </th>
         </tr>
         <tr> 
-            <th><a>Protfolio</a></th>
-            <th>HTML and CSS</th>
+            <td><a>Portfolio</a></td>
+            <td>HTML and CSS</td>
         </tr>
         </table>
          </section>
         <section id="Contact">
             <h1>
-            Contacte Me
+            Contact Me
         </h1>
-        <p>Feel free to get in touch with me using the below form</p>
-        <form action="/" method="POST">
+        <p id="contactFormText">Feel free to get in touch with me using the below form</p>
+        
+        <div id="successMessage" style="display:none; background:cornsilk; border:5px solid green; border-radius:20px; padding:20px; margin-bottom:20px;">
+            <img src="tick.png" width="100" style="height:auto; width:100px; border-radius:0;">
+            <h2>Thank You!</h2>
+            <p>Form submitted successfully.</p>
+        </div>
+
+        <form id="contactForm">
             <label for="name">Name:</label>
             <input type="text" name="name"  class="input" placeholder="Name" required>
             <br>
             <label for="email">Email:</label>
-          <input type="email" name="email"  class="input" placeholder="Email" required><br>
+            <input type="email" name="email"  class="input" placeholder="Email" required><br>
             <button type="submit" class="submit">Submit</button>
         </form>
         </section>
@@ -186,10 +193,20 @@
     </a>
     <footer>
         
-        <p>2024 My protfolio</p>
+        <p>2026 My portfolio</p>
         <p>(●'◡'●) Mahesh Babu  |  🚀Go developer  |  🎌JLPT N5 </p>
         <a>😁 Thanks for Visiting my portfolio💻</a>
 
     </footer>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    
+    document.getElementById("contactForm").style.display = "none";
+    document.getElementById("contactFormText").style.display = "none";
+    
+    document.getElementById("successMessage").style.display = "block";
+});
+</script>
 </body>
 </html>

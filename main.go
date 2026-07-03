@@ -15,7 +15,7 @@ func Protfolio(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("Name:", name)
 		fmt.Println("Email:", email)
 		fmt.Println("_______________________________________________________________________________________")
-		http.ServeFile(w, r, "form.html")
+		http.Redirect(w, r, "/sucess=true#contact", http.StatusSeeOther)
 		return
 	}
 	http.ServeFile(w, r, "index.html")
