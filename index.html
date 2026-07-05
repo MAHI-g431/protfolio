@@ -36,8 +36,12 @@
             border: none;
             border-radius: 11px;
             cursor: pointer;
+            transition: 0.2s;
+            font-size: 15px;
         }
         .button:hover{
+        transform: scale(1.05);
+        box-shadow: 0 0 40px yellow ;
             background-color: blue;
             color: rgb(235, 235, 235);
         }
@@ -178,7 +182,7 @@
             <p>Form submitted successfully.</p>
         </div>
 
-        <form id="contactForm">
+        <form id="contactForm" action="/" method="post">
             <label for="name">Name:</label>
             <input type="text" name="name"  class="input" placeholder="Name" required>
             <br>
@@ -200,12 +204,16 @@
     </footer>
 <script>
 document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault(); 
+    /* alert("Form Submitted succefully") */
     
     document.getElementById("contactForm").style.display = "none";
     document.getElementById("contactFormText").style.display = "none";
     
     document.getElementById("successMessage").style.display = "block";
+
+    setTimeout(()=>{
+        window.location.href="/";
+    }, 5000);
 });
 </script>
 </body>

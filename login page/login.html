@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+</head>
+<body>
+    <style>
+        body{
+            height: 100vh;
+            background-image: url("gr.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            display: flex;
+           
+        }
+        div.login{
+            border: 1px solid deeppink;
+            padding: 137px;
+            border-radius: 28px;
+            position: relative;
+            text-align: center;
+            
+        }
+       
+        
+        input.input{
+                     border: none;
+                     border-radius: 9px;
+                      width: 239px;
+                      height: 42px;
+                      text-align: center;
+                     padding: 29px;
+        }
+        input:hover{
+            background-color: cornflowerblue;
+            
+        }
+        input:hover::placeholder{
+            color: aqua;
+        }
+        .login input{
+            margin-bottom: 26px;
+        }
+        h1{
+            color: darkslateblue;
+            padding: 11px;
+        }
+        input.log{
+             border: none;
+                 border-radius: 9px;
+                 width: 271px;
+         height: 42px;
+         text-align: center;
+        }
+    </style>
+   
+   <div class="login">
+        <form action="/login" method="post" ></form>
+        <h1>Login</h1>
+        <input type="name" class="input" placeholder="User-Name👤"><br>
+        <input type="name" class="input" placeholder="Password🔑"><br>
+        <section class="log1"><input type="name" class="log" placeholder="➡️Login"></section>
+    </div>
+
+    
+</body>
+</html>
