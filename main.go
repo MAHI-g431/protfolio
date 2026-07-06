@@ -5,25 +5,31 @@ import (
 	"net/http"
 )
 
-func Protfolio(w http.ResponseWriter, r *http.Request) {
-	if r.Method == "POST" {
+func Portfolio(w http.ResponseWriter, r *http.Request) {
+	if r.Method == http.MethodPost {
 		r.ParseForm()
+
 		name := r.FormValue("name")
 		email := r.FormValue("email")
 
-		fmt.Println("New form submission")
+		fmt.Println("New Form Submission")
 		fmt.Println("Name:", name)
 		fmt.Println("Email:", email)
-		fmt.Println("_______________________________________________________________________________________")
-		http.Redirect(w, r, "/sucess=true#contact", http.StatusSeeOther)
+
+		http.Redirect(w, r, "/?success=true#Contact", http.StatusSeeOther)
 		return
 	}
-	http.ServeFile(w, r, "index.html")
 
+	http.ServeFile(w, r, "index.html")
 }
+
 func main() {
-	http.HandleFunc("/", Protfolio)
-	http.Handle("/tick.png", http.FileServer(http.Dir(".")))
+	http.HandleFunc("/", Portfolio)
+
 	fmt.Println("Server running at http://localhost:3000")
-	http.ListenAndServe(":3000", nil)
+
+	err := http.ListenAndServe(":3000", nil)
+	if err != nil {
+		fmt.Println("Error:", err)
+	}
 }

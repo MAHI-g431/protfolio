@@ -49,8 +49,8 @@
             height: 500px;
             width: 262px;
             border-radius: 89px;
-         transition:all 0.05 ease;
-         animation: pop 0.6s ease;
+         transition:all 0.5 ease;
+         
         }
         img:hover{
             transform: scale(1.02);
@@ -192,7 +192,7 @@
             <p>Form submitted successfully.</p>
         </div>
 
-        <form id="contactForm" action="/" method="post">
+        <form id="contactForm" action="/" >
             <label for="name">Name:</label>
             <input type="text" name="name"  class="input" placeholder="Name" required>
             <br>
@@ -214,16 +214,12 @@
     </footer>
 <script>
 document.getElementById("contactForm").addEventListener("submit", function(event) {
-    /* alert("Form Submitted succefully") */
+    alert("Form Submitted Successfully")
     
     document.getElementById("contactForm").style.display = "none";
     document.getElementById("contactFormText").style.display = "none";
     
     document.getElementById("successMessage").style.display = "block";
-
-    setTimeout(()=>{
-        window.location.href="/";
-    }, 5000);
 });
 </script>
 </body>
