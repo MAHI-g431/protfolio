@@ -21,9 +21,10 @@
              background-color: floralwhite;
              text-align: center;
         }
-        h1{
+        #project{
             color: crimson;
             font-size: 2rem;
+            position: absolute;
         }
         header h1{
             color: white;
@@ -45,16 +46,10 @@
             background-color: blue;
             color: rgb(235, 235, 235);
         }
-        img{
+        #me{
             height: 500px;
             width: 262px;
             border-radius: 89px;
-         transition:all 0.5 ease;
-         
-        }
-        img:hover{
-            transform: scale(1.02);
-            box-shadow: 0 0 50px maroon;
         }
         section{
             height: 100vh;
@@ -124,11 +119,85 @@
         }
          #Projects h1{
            position: relative;
-           top: 40vh;
+                  top: -39vh;
          }
          a{
             text-decoration: none;
          }
+         #bean_image{
+                         position: absolute;
+    width: 402px;
+    top: 326%;
+    height: 64%;
+    left: 61px;
+    border-radius: 22px;
+    transition:.77s;
+         }
+         #bean_image:hover,#bean_image:focus{
+             box-shadow:0 0 40px rgba(138, 100, 11, 0.791);
+    transform:scale(1.01);
+    outline:none;
+         }
+         #t{
+                    position: absolute;
+      top: 326.9%;
+    left: 97px;
+    font-size: 45px;
+     background: linear-gradient(to right, #165a71, rgb(142, 195, 38), #977a23);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+         }
+         #he{
+                 position: absolute;
+             top: 331.9%;
+    left: 7.9%;
+            font-size: 33px;
+         }
+         #b{
+            position: absolute;
+          top: 328.4%;
+          left: 11.1%;
+           font-size: 39px;
+             background: linear-gradient(to right, #946d37, rgb(174, 160, 77), #3f371f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+         }
+         #ean{
+            position: absolute;
+             top: 331.9%;
+    left: 12.5%;
+           font-size: 33px;
+         }
+         #house{
+            position: absolute;
+          top: 328.4%;
+          left: 16.6%;
+           font-size: 39px;
+             background: linear-gradient(to right, #511eb5, rgb(193, 91, 43), #987d2b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+         }
+         #ouse{
+            position: absolute;
+             top: 331.9%;
+    left: 17.9%;
+           font-size: 33px;
+
+         }
+         #move{
+            position: absolute;
+         }
+         #the_bean_house
+         {
+             transition:.3s;
+        }
+       /*   #the_bean_house{
+                position: absolute;
+    top: 329%;
+    font-size: 28px;
+    left: 139px;
+
+         } */
     </style>
     <header id="Top">
         <div>
@@ -150,7 +219,7 @@
     <main>
         <section id="About">
          <h1> Mahesh</h1>
-        <img src="myimage.jpg" width="200">
+        <img src="myimage.jpg"  id="me" width="200">
             <p>I am Mahesh Babu from Andhra Loyola Institute of engineering and technology<br>I am currently pursuing my <strong>B tech</strong> in Andhra Loyola Institute of engineering and technology </p>
         </section>
         <div class="skill">
@@ -166,10 +235,10 @@
         </section>
 </div>
         <section id="Projects">
-        <h1>
+        <h1 id="project">
             Projects
         </h1>
-        <table border="1">
+       <!--  <table border="1">
         <tr >
             <th>Projects </th>
             <th>Languages used  </th>
@@ -178,7 +247,20 @@
             <td><a>Portfolio</a></td>
             <td>HTML and CSS</td>
         </tr>
-        </table>
+        </table> -->
+      <div id="the_bean_house">  <img src="bean_image.png" id="bean_image" alt="">
+            <h4 id="t">T</h4><p id="he">he</p>
+            <h4 id="b">B</h4><p id="ean">ean</p>
+            <h4 id="house">H</h4><p id="ouse">ouse</p></div>
+           
+
+
+
+
+
+
+
+
          </section>
         <section id="Contact">
             <h1>
@@ -187,7 +269,7 @@
         <p id="contactFormText">Feel free to get in touch with me using the below form</p>
         
         <div id="successMessage" style="display:none; background:cornsilk; border:5px solid green; border-radius:20px; padding:20px; margin-bottom:20px;">
-            <img src="tick.png" width="100" style="height:auto; width:100px; border-radius:0;">
+            <img src="tick.png"  width="100" style="height:auto; width:100px; border-radius:0;">
             <h2>Thank You!</h2>
             <p>Form submitted successfully.</p>
         </div>
